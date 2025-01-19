@@ -30,7 +30,7 @@ fun visaFee(currentTransaction: Int): Int {
     return if ((currentTransaction * tax) < 35) min_tax else (currentTransaction * tax).toInt()
 }
 
-fun taxFee(cardType: String, transactionsPerMonth: Int, currentTransaction: Int): Int {
+fun taxFee(cardType: String = "Мир", transactionsPerMonth: Int = 0, currentTransaction: Int): Int {
 
     var fee: Int
     if (transactionsPerMonth + currentTransaction > 600_000 || currentTransaction > 150_000) {
